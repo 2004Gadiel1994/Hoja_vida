@@ -1,56 +1,46 @@
 :root {
-  --primary: #004A98;
-  --secondary: #008DD5;
-  --neutral: #3C3C3B;
-  --bg: #f9f9f9;
-  --text: #222;
+  --color-primario: #004A98;
+  --color-secundario: #008DD5;
+  --color-neutro: #3C3C3B;
+  --color-fondo: #f9f9f9;
+  --color-texto: #222;
+  --color-claro: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  margin: 0;
-  padding: 0;
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  line-height: 1.6;
+  padding: 1rem;
 }
 
 header {
-  background-color: var(--primary);
+  background-color: var(--color-primario);
   color: white;
-  padding: 2rem;
   text-align: center;
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  margin-bottom: 2rem;
 }
 
-section {
-  padding: 2rem;
-  border-bottom: 1px solid #ddd;
-}
-
-h2 {
-  color: var(--primary);
+header h1 {
+  font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
-ul {
-  padding-left: 1.2rem;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.5rem;
-}
-
-.tags li {
-  list-style: none;
-  background-color: var(--secondary);
-  color: white;
-  padding: 0.4rem 0.8rem;
-  border-radius: 1rem;
+header p {
+  margin: 0.3rem 0;
 }
 
 a {
-  color: var(--primary);
+  color: var(--color-secundario);
   text-decoration: none;
 }
 
@@ -58,9 +48,39 @@ a:hover {
   text-decoration: underline;
 }
 
+section {
+  background-color: var(--color-claro);
+  border: 1px solid #ddd;
+  border-left: 5px solid var(--color-primario);
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  border-radius: 6px;
+}
+
+section h2 {
+  color: var(--color-primario);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  color: var(--color-neutro);
+  margin-top: 1rem;
+}
+
+ul {
+  padding-left: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
 footer {
   text-align: center;
-  background-color: var(--neutral);
-  color: white;
-  padding: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+  padding: 1rem 0;
+  border-top: 1px solid #ccc;
+  margin-top: 2rem;
 }
